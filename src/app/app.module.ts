@@ -11,6 +11,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { DatePipe } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatCardModule} from '@angular/material/card'
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,10 +23,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerService } from './service/customer.service'; 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent
+    CustomerComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,12 @@ import { CustomerService } from './service/customer.service';
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatTableModule,
+    MatPaginatorModule,
+    MatCardModule,
+    MatTabsModule
+   
   ],
   providers: [
     CustomerService,
