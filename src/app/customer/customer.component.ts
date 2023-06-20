@@ -76,6 +76,21 @@ export class CustomerComponent implements OnInit {
 
   }
 
+  //clearCustomer(){
+   // this.customer = {
+    //  idCustomer: '',
+    //  firstNameCustomer: '',
+     // lastNameCustomer: '',
+     // cpfCustomer:'',
+     // birthdateCustomer: '',
+  //  dateCreatedCustomer: '',
+    //monthlyIncomeCustomer: '',
+   // statusCustomer: '',
+      // emailCustomer: '',
+  //  passwordCustomer: '',
+  //  }
+  //}
+
   listCustomer() {
     this.service.list().subscribe((response:any) => {
       this.ELEMENT_DATA = response.result as Customer[];
